@@ -1,0 +1,10 @@
+{
+  "name": "hello_world_final",
+  "integrations": {
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
+  },
+  "type": "angular"
+}

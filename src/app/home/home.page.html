@@ -1,0 +1,80 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Conversor de Valores
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large"></ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div id="container">
+    <ion-item>
+      <ion-label position="floating">Coloque a sua altura em Mt "x.xx"</ion-label>
+      <ion-input type="text" [(ngModel)]="altura" maxlength="4"></ion-input>
+      <ion-label position="floating">Coloque o seu sexo</ion-label>
+      <ion-input type="text" [(ngModel)]="sexo" maxlength="1"></ion-input>
+      <ion-button expand="block" color="dark" (click)="inserir()">Calcular</ion-button>
+
+    </ion-item>
+  <ion-input value="{{resImcArred + ' Seu peso Ideal'}}" readonly="true"></ion-input>
+  </div>
+
+</ion-content>
+<!--
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large"></ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-row style="border-bottom: groove;">
+    <ion-col col-4>
+    <ion-label >Nome</ion-label>
+  </ion-col>
+  <ion-col col-4>
+    <ion-label >Sexo</ion-label>
+  </ion-col>
+    <ion-col col-4>
+    <ion-label >IMC</ion-label>
+  </ion-col>
+</ion-row>
+<ion-row style="border-bottom: groove;">
+    <ion-col col-4>
+    <ion-label >FULANO POR A FUNÇÃO AQUI</ion-label>
+  </ion-col>
+  <ion-col col-4>
+    <ion-label >02/02/2018</ion-label>
+  </ion-col>
+    <ion-col col-4>
+    <ion-label >row</ion-label>
+  </ion-col>
+</ion-row>
+<ion-row style="border-bottom: groove;">
+    <ion-col col-4>
+    <ion-label >Nome</ion-label>
+  </ion-col>
+  <ion-col col-4>
+    <ion-label >02/02/2018</ion-label>
+  </ion-col>
+    <ion-col col-4>
+    <ion-label >row</ion-label>
+  </ion-col>
+</ion-row>
+<ion-row >
+    <ion-col col-4>
+    <ion-label >row</ion-label>
+  </ion-col>
+  <ion-col col-4>
+    <ion-label >02/02/2018</ion-label>
+  </ion-col>
+    <ion-col col-4>
+    <ion-label >row</ion-label>
+  </ion-col>
+</ion-row>
+ -->
