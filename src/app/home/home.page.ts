@@ -6,24 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  peso: string;
-  altura: string;
-  resImc: number;
-  resImcArred: string;
-  sexo: string;
-  erro: string;
+idade: number;
+msg: string;
+
   constructor() {}
-  inserir(){
-    if(this.sexo === 'm'|| this.sexo === 'M'){
-      this.resImc= (72.7 * parseFloat(this.altura)) - 50;
-      this.resImcArred = this.resImc.toFixed(2);
-    }else if(this.sexo === 'f'|| this.sexo === 'F'){
-      this.resImc= ((62.1 * parseFloat(this.altura)) - 44.7);
-      this.resImcArred = this.resImc.toFixed(2);
+
+  verificar(){
+    if(this.idade < 4.9 ){
+      this.msg = 'Não há categoria';
+    }else if(this.idade >= 5 && this.idade < 7.9){
+      this.msg = 'Infantil A';
+    }else if(this.idade >= 8 && this.idade < 10.9){
+      this.msg = 'Infantil B';
+    }else if(this.idade >= 11 && this.idade < 13.9){
+      this.msg = 'Juvenil A';
+    }else if(this.idade >= 14 && this.idade < 17.9){
+      this.msg = 'Juvenil B';
     }else{
-      this.erro='Você deve escolher entre "M" para Masculino ou "F" para Feminino';
-      return;
+      this.msg = 'Sênior';
     }
   }
-
 }
